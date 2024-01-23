@@ -12,7 +12,7 @@ Projeto simples que visa a criação de um app android a fim de aplicar a utiliz
 
 ## Capturas de Tela
 
-Inclua capturas de tela ou gifs animados do seu aplicativo para dar uma visão visual.
+![image](https://github.com/AnnaKarolineNunes/AppATMConsultoria/assets/101477642/b56905df-00dd-444c-bbb8-e6e3957b4e18)
 
 ## Pré-requisitos
 
