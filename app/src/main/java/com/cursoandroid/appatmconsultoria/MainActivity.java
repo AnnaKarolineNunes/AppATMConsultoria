@@ -1,5 +1,7 @@
 package com.cursoandroid.appatmconsultoria;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -35,8 +37,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                enviarEmail();
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -52,6 +53,17 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+    public void enviarEmail(){
+        //Intent intent = new Intent( Intent.ACTION_DIAL, Uri.parse("tel:0119763486"));
+        //String imagem = "https://ichef.bbci.co.uk/news/640/cpsprodpb/cffb/live/f5d7e3a0-b770-11ed-89f4-f3657d2bfa3b.jpg";
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra( Intent.EXTRA_EMAIL, new String[]{"atendimento@atmconsultoria.com.br"} ); // passando o dado
+        intent.putExtra( Intent.EXTRA_SUBJECT, "Contato pelo App" ); // assunto do email
+        intent.putExtra( Intent.EXTRA_TEXT, "Mensagem automatica aqui"); // corpo da mensagem
+
+        intent.setType("message/rfc822"); // tipo de dado para envio de email
+        startActivity(Intent.createChooser(intent,"compartilhar")); // escolhe o app apartir de uma intent
+    }
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
