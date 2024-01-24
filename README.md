@@ -5,11 +5,6 @@
 
 Projeto que visa a criação de um app android a fim de aplicar a utilização de layouts, navigation drawer com fragmets e envio de emails.
 
-## Recursos
-
-- Lista de principais recursos ou funcionalidades.
-- Exemplos de uso, se aplicável.
-
 ## Capturas de Tela
 
 ![image](https://github.com/AnnaKarolineNunes/AppATMConsultoria/assets/101477642/52573c85-74e7-48ba-a90a-a02ccd4f9c32)
